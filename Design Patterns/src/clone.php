@@ -1,6 +1,5 @@
 <?php
 
-
 use Alura\DesignPattern\ItemOrcamento;
 use Alura\DesignPattern\NotaFiscal\ConstrutorNotaFiscalServico;
 
@@ -23,5 +22,5 @@ $notaFiscal = $builder->paraEmpresa('05029600000368', 'AGIR')
     ->comObservacoes('Esta nota fiscao foi construida com um construtor')
     ->constroi();
 
-echo $notaFiscal->valorImpostos;
-
+$notaFiscal2 = clone $notaFiscal;
+$notaFiscal2->itens[] = new ItemOrcamento();
