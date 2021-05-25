@@ -102,9 +102,9 @@ class AvaliadorTest extends TestCase
   public function entregaLeiloes(): array
     {
         return [
-          [$this->leilaoemOrdemCrescente()],
-          [$this->leilaoemOrdemDecrescente()],
-          [$this->leilaoemOrdemAleatoria()]
+          'ordem-crescente' => [$this->leilaoemOrdemCrescente()],
+          'ordem-decrescente' => [$this->leilaoemOrdemDecrescente()],
+          'ordem-aleatoria' => [$this->leilaoemOrdemAleatoria()]
         ];
     }
 }
