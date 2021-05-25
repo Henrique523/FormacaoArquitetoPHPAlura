@@ -6,15 +6,28 @@ use Alura\Leilao\Dao\Leilao as LeilaoDao;
 
 class Encerrador
 {
-    public function encerra()
+  private LeilaoDao $dao;
+  private EnviadorEmail $enviadorEmail;
+
+  public function __construct(LeilaoDao $dao, EnviadorEmail $enviadorEmail)
+  {
+    $this->dao = $dao;
+    $this->enviadorEmail = $enviadorEmail;
+  }
+
+  public function encerra()
     {
-        $dao = new LeilaoDao();
-        $leiloes = $dao->recuperarNaoFinalizados();
+        $leiloes = $this->dao->recuperarNaoFinalizados();
 
         foreach ($leiloes as $leilao) {
             if ($leilao->temMaisDeUmaSemana()) {
+              try {
                 $leilao->finaliza();
-                $dao->atualiza($leilao);
+                $this->dao->atualiza($leilao);
+                $this->enviadorEmail->notificarTerminoLeilao($leilao);
+              } catch (\DomainException $e) {
+                error_log($e->getMessage());
+              }
             }
         }
     }
