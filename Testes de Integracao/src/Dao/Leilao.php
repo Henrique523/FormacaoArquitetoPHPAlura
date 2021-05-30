@@ -6,7 +6,7 @@ use Alura\Leilao\Model\Leilao as ModelLeilao;
 
 class Leilao
 {
-    private $con;
+    private \PDO $con;
 
     public function __construct(\PDO $con)
     {
@@ -50,7 +50,7 @@ class Leilao
      */
     private function recuperarLeiloesSeFinalizado(bool $finalizado): array
     {
-        $sql = 'SELECT FROM leiloes WHERE finalizado = ' . ($finalizado ? 1 : 0);
+        $sql = 'SELECT * FROM leiloes WHERE finalizado = ' . ($finalizado ? 1 : 0);
         $stm = $this->con->query($sql, \PDO::FETCH_ASSOC);
 
         $dados = $stm->fetchAll();

@@ -6,14 +6,10 @@ class Leilao
 {
     /** @var Lance[] */
     private $lances;
-    /** @var string */
-    private $descricao;
-    /** @var bool */
-    private $finalizado;
-    /** @var \DateTimeInterface  */
-    private $dataInicio;
-    /** @var int */
-    private $id;
+    private string $descricao;
+    private bool $finalizado;
+    private \DateTimeInterface $dataInicio;
+    private ?int $id;
 
     public function __construct(string $descricao, \DateTimeImmutable $dataInicio = null, int $id = null)
     {
