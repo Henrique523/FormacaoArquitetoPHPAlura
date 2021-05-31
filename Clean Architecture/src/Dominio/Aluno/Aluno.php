@@ -13,6 +13,7 @@ class Aluno
 
   /** @var Telefone[]  */
   private array $telefones;
+  private string $senha;
 
   public static function comCpfNomeEEmail(string $cpf, string $nome, string $email): self
   {
