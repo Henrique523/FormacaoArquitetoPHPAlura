@@ -4,8 +4,7 @@ namespace Alura\Leilao\Model;
 
 class Usuario
 {
-    /** @var string */
-    private $nome;
+    private string $nome;
 
     public function __construct(string $nome)
     {

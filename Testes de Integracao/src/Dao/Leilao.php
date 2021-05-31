@@ -6,7 +6,7 @@ use Alura\Leilao\Model\Leilao as ModelLeilao;
 
 class Leilao
 {
-    private $con;
+    private \PDO $con;
 
     public function __construct(\PDO $con)
     {
