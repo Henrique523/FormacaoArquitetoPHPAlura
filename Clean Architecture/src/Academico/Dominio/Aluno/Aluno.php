@@ -2,7 +2,8 @@
 
 namespace Alura\Arquitetura\Academico\Dominio\Aluno;
 
-use Alura\Arquitetura\Academico\Dominio\{Cpf, Email};
+use Alura\Arquitetura\Shared\Dominio\Cpf;
+use Alura\Arquitetura\Academico\Dominio\Email;
 
 class Aluno
 {

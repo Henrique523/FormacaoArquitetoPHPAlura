@@ -3,7 +3,7 @@
 namespace Alura\Arquitetura\Academico\Aplicacao\Aluno\MatricularAluno;
 
 use Alura\Arquitetura\Academico\Dominio\Aluno\{AlunoMatriculado, RepositorioDeAluno};
-use Alura\Arquitetura\Academico\Dominio\PublicadorDeEvento;
+use Alura\Arquitetura\Shared\Dominio\Evento\PublicadorDeEvento;
 
 class MatricularAluno
 {

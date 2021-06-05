@@ -2,7 +2,7 @@
 
 namespace Alura\Arquitetura\Gamificacao\Infra\Selo;
 
-use Alura\Arquitetura\Academico\Dominio\Cpf;
+use Alura\Arquitetura\Shared\Dominio\Cpf;
 use Alura\Arquitetura\Gamificacao\Dominio\Selo\{Selo, RepositorioDeSelo};
 
 class RepositorioDeSeloEmMemoria implements RepositorioDeSelo

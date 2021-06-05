@@ -2,7 +2,7 @@
 
 namespace Alura\Arquitetura\Academico\Dominio\Aluno;
 
-use Alura\Arquitetura\Academico\Dominio\Cpf;
+use Alura\Arquitetura\Shared\Dominio\Cpf;
 
 interface RepositorioDeAluno
 {

@@ -3,7 +3,7 @@
 namespace Alura\Arquitetura\Academico\Infra\Aluno;
 
 use Alura\Arquitetura\Academico\Dominio\Aluno\{Aluno, AlunoNaoEncontrado, RepositorioDeAluno};
-use Alura\Arquitetura\Academico\Dominio\Cpf;
+use Alura\Arquitetura\Shared\Dominio\Cpf;
 
 class RepositorioDeAlunoEmMemoria implements RepositorioDeAluno
 {

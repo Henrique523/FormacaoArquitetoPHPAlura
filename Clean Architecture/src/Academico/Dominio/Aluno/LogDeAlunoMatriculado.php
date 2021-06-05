@@ -3,7 +3,9 @@
 namespace Alura\Arquitetura\Academico\Dominio\Aluno;
 
 
-use Alura\Arquitetura\Academico\Dominio\{Evento, OuvinteDeEvento};
+
+use Alura\Arquitetura\Shared\Dominio\Evento\Evento;
+use Alura\Arquitetura\Shared\Dominio\Evento\OuvinteDeEvento;
 
 class LogDeAlunoMatriculado extends OuvinteDeEvento
 {

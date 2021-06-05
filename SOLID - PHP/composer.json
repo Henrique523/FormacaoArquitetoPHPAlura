@@ -4,5 +4,8 @@
     "psr-4": {
       "Alura\\Solid\\": "src/"
     }
+  },
+  "require": {
+    "ext-json": "*"
   }
 }
